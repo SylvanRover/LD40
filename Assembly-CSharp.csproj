@@ -96,6 +96,7 @@
      <Compile Include="Assets\PostProcessing\Runtime\Utils\MaterialFactory.cs" />
      <Compile Include="Assets\PostProcessing\Runtime\Utils\RenderTextureFactory.cs" />
      <Compile Include="Assets\PostProcessing\Utilities\CustomMotionTexture\ExampleWheelController.cs" />
+     <Compile Include="Assets\Scripts\TopDown_Controller.cs" />
      <Compile Include="Assets\ThirdParty\OLD TV\FilterBehavior\FilterBehaviour.cs" />
      <Compile Include="Assets\ThirdParty\OLD TV\OLD TV Filter 2\OLDTVScreen.cs" />
      <Compile Include="Assets\ThirdParty\OLD TV\OLD TV Filter 2\OLDTVTube.cs" />

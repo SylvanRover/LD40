@@ -90,6 +90,7 @@ TextureImporter:
     21300166: tileset_86
     21300168: tileset_87
     21300170: tileset_88
+  externalObjects: {}
   serializedVersion: 4
   mipmaps:
     mipMapMode: 0
@@ -98,6 +99,8 @@ TextureImporter:
     linearTexture: 0
     fadeOut: 0
     borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
     mipMapFadeDistanceStart: 1
     mipMapFadeDistanceEnd: 3
   bumpmap:
@@ -113,10 +116,13 @@ TextureImporter:
   textureFormat: 1
   maxTextureSize: 2048
   textureSettings:
+    serializedVersion: 2
     filterMode: 0
     aniso: -1
     mipBias: -1
-    wrapMode: 1
+    wrapU: 1
+    wrapV: 1
+    wrapW: 1
   nPOTScale: 0
   lightmap: 0
   compressionQuality: 50
@@ -138,6 +144,7 @@ TextureImporter:
   platformSettings:
   - buildTarget: DefaultTexturePlatform
     maxTextureSize: 512
+    resizeAlgorithm: 0
     textureFormat: -1
     textureCompression: 0
     compressionQuality: 50
@@ -146,6 +153,34 @@ TextureImporter:
     overridden: 0
   - buildTarget: Standalone
     maxTextureSize: 512
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 0
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+  - buildTarget: iPhone
+    maxTextureSize: 512
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 0
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+  - buildTarget: Android
+    maxTextureSize: 512
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 0
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+  - buildTarget: WebGL
+    maxTextureSize: 512
+    resizeAlgorithm: 0
     textureFormat: -1
     textureCompression: 0
     compressionQuality: 50
@@ -171,6 +206,7 @@ TextureImporter:
         - {x: -8, y: -8}
         - {x: 8, y: -8}
         - {x: 8, y: 8}
+      physicsShape: []
       tessellationDetail: 0
     - serializedVersion: 2
       name: tileset_1
@@ -188,6 +224,7 @@ TextureImporter:
         - {x: -8, y: -8}
         - {x: 8, y: -8}
         - {x: 8, y: 8}
+      physicsShape: []
       tessellationDetail: 0
     - serializedVersion: 2
       name: tileset_2
@@ -205,6 +242,7 @@ TextureImporter:
         - {x: -8, y: -8}
         - {x: 8, y: -8}
         - {x: 8, y: 8}
+      physicsShape: []
       tessellationDetail: 0
     - serializedVersion: 2
       name: tileset_3
@@ -222,6 +260,7 @@ TextureImporter:
         - {x: -8, y: -8}
         - {x: 8, y: -8}
         - {x: 8, y: 8}
+      physicsShape: []
       tessellationDetail: 0
     - serializedVersion: 2
       name: tileset_4
@@ -239,6 +278,7 @@ TextureImporter:
         - {x: -8, y: -8}
         - {x: 8, y: -8}
         - {x: 8, y: 8}
+      physicsShape: []
       tessellationDetail: 0
     - serializedVersion: 2
       name: tileset_5
@@ -256,6 +296,7 @@ TextureImporter:
         - {x: -8, y: -8}
         - {x: 8, y: -8}
         - {x: 8, y: 8}
+      physicsShape: []
       tessellationDetail: 0
     - serializedVersion: 2
       name: tileset_6
@@ -273,6 +314,7 @@ TextureImporter:
         - {x: -8, y: -8}
         - {x: 8, y: -8}
         - {x: 8, y: 8}
+      physicsShape: []
       tessellationDetail: 0
     - serializedVersion: 2
       name: tileset_7
@@ -290,6 +332,7 @@ TextureImporter:
         - {x: -8, y: -8}
         - {x: 8, y: -8}
         - {x: 8, y: 8}
+      physicsShape: []
       tessellationDetail: 0
     - serializedVersion: 2
       name: tileset_8
@@ -307,6 +350,7 @@ TextureImporter:
         - {x: -8, y: -8}
         - {x: 8, y: -8}
         - {x: 8, y: 8}
+      physicsShape: []
       tessellationDetail: 0
     - serializedVersion: 2
       name: tileset_9
@@ -324,6 +368,7 @@ TextureImporter:
         - {x: -8, y: -8}
         - {x: 8, y: -8}
         - {x: 8, y: 8}
+      physicsShape: []
       tessellationDetail: 0
     - serializedVersion: 2
       name: tileset_10
@@ -341,6 +386,7 @@ TextureImporter:
         - {x: -8, y: -8}
         - {x: 8, y: -8}
         - {x: 8, y: 8}
+      physicsShape: []
       tessellationDetail: 0
     - serializedVersion: 2
       name: tileset_11
@@ -358,6 +404,7 @@ TextureImporter:
         - {x: -8, y: -8}
         - {x: 8, y: -8}
         - {x: 8, y: 8}
+      physicsShape: []
       tessellationDetail: 0
     - serializedVersion: 2
       name: tileset_12
@@ -375,6 +422,7 @@ TextureImporter:
         - {x: -8, y: -8}
         - {x: 8, y: -8}
         - {x: 8, y: 8}
+      physicsShape: []
       tessellationDetail: 0
     - serializedVersion: 2
       name: tileset_13
@@ -392,6 +440,7 @@ TextureImporter:
         - {x: -8, y: -8}
         - {x: 8, y: -8}
         - {x: 8, y: 8}
+      physicsShape: []
       tessellationDetail: 0
     - serializedVersion: 2
       name: tileset_14
@@ -409,6 +458,7 @@ TextureImporter:
         - {x: -8, y: -8}
         - {x: 8, y: -8}
         - {x: 8, y: 8}
+      physicsShape: []
       tessellationDetail: 0
     - serializedVersion: 2
       name: tileset_15
@@ -426,6 +476,7 @@ TextureImporter:
         - {x: -8, y: -8}
         - {x: 8, y: -8}
         - {x: 8, y: 8}
+      physicsShape: []
       tessellationDetail: 0
     - serializedVersion: 2
       name: tileset_16
@@ -443,6 +494,7 @@ TextureImporter:
         - {x: -8, y: -8}
         - {x: 8, y: -8}
         - {x: 8, y: 8}
+      physicsShape: []
       tessellationDetail: 0
     - serializedVersion: 2
       name: tileset_17
@@ -460,6 +512,7 @@ TextureImporter:
         - {x: -8, y: -8}
         - {x: 8, y: -8}
         - {x: 8, y: 8}
+      physicsShape: []
       tessellationDetail: 0
     - serializedVersion: 2
       name: tileset_18
@@ -477,6 +530,7 @@ TextureImporter:
         - {x: -8, y: -8}
         - {x: 8, y: -8}
         - {x: 8, y: 8}
+      physicsShape: []
       tessellationDetail: 0
     - serializedVersion: 2
       name: tileset_19
@@ -494,6 +548,7 @@ TextureImporter:
         - {x: -8, y: -8}
         - {x: 8, y: -8}
         - {x: 8, y: 8}
+      physicsShape: []
       tessellationDetail: 0
     - serializedVersion: 2
       name: tileset_20
@@ -511,6 +566,7 @@ TextureImporter:
         - {x: -8, y: -8}
         - {x: 8, y: -8}
         - {x: 8, y: 8}
+      physicsShape: []
       tessellationDetail: 0
     - serializedVersion: 2
       name: tileset_21
@@ -528,6 +584,7 @@ TextureImporter:
         - {x: -8, y: -8}
         - {x: 8, y: -8}
         - {x: 8, y: 8}
+      physicsShape: []
       tessellationDetail: 0
     - serializedVersion: 2
       name: tileset_22
@@ -545,6 +602,7 @@ TextureImporter:
         - {x: -8, y: -8}
         - {x: 8, y: -8}
         - {x: 8, y: 8}
+      physicsShape: []
       tessellationDetail: 0
     - serializedVersion: 2
       name: tileset_23
@@ -562,6 +620,7 @@ TextureImporter:
         - {x: -8, y: -8}
         - {x: 8, y: -8}
         - {x: 8, y: 8}
+      physicsShape: []
       tessellationDetail: 0
     - serializedVersion: 2
       name: tileset_24
@@ -579,6 +638,7 @@ TextureImporter:
         - {x: -8, y: -8}
         - {x: 8, y: -8}
         - {x: 8, y: 8}
+      physicsShape: []
       tessellationDetail: 0
     - serializedVersion: 2
       name: tileset_25
@@ -596,6 +656,7 @@ TextureImporter:
         - {x: -8, y: -8}
         - {x: 8, y: -8}
         - {x: 8, y: 8}
+      physicsShape: []
       tessellationDetail: 0
     - serializedVersion: 2
       name: tileset_26
@@ -613,6 +674,7 @@ TextureImporter:
         - {x: -8, y: -8}
         - {x: 8, y: -8}
         - {x: 8, y: 8}
+      physicsShape: []
       tessellationDetail: 0
     - serializedVersion: 2
       name: tileset_27
@@ -630,6 +692,7 @@ TextureImporter:
         - {x: -8, y: -8}
         - {x: 8, y: -8}
         - {x: 8, y: 8}
+      physicsShape: []
       tessellationDetail: 0
     - serializedVersion: 2
       name: tileset_28
@@ -647,6 +710,7 @@ TextureImporter:
         - {x: -8, y: -8}
         - {x: 8, y: -8}
         - {x: 8, y: 8}
+      physicsShape: []
       tessellationDetail: 0
     - serializedVersion: 2
       name: tileset_29
@@ -664,6 +728,7 @@ TextureImporter:
         - {x: -8, y: -8}
         - {x: 8, y: -8}
         - {x: 8, y: 8}
+      physicsShape: []
       tessellationDetail: 0
     - serializedVersion: 2
       name: tileset_30
@@ -681,6 +746,7 @@ TextureImporter:
         - {x: -8, y: -8}
         - {x: 8, y: -8}
         - {x: 8, y: 8}
+      physicsShape: []
       tessellationDetail: 0
     - serializedVersion: 2
       name: tileset_31
@@ -698,6 +764,7 @@ TextureImporter:
         - {x: -8, y: -8}
         - {x: 8, y: -8}
         - {x: 8, y: 8}
+      physicsShape: []
       tessellationDetail: 0
     - serializedVersion: 2
       name: tileset_32
@@ -715,6 +782,7 @@ TextureImporter:
         - {x: -8, y: -8}
         - {x: 8, y: -8}
         - {x: 8, y: 8}
+      physicsShape: []
       tessellationDetail: 0
     - serializedVersion: 2
       name: tileset_33
@@ -732,6 +800,7 @@ TextureImporter:
         - {x: -8, y: -8}
         - {x: 8, y: -8}
         - {x: 8, y: 8}
+      physicsShape: []
       tessellationDetail: 0
     - serializedVersion: 2
       name: tileset_34
@@ -749,6 +818,7 @@ TextureImporter:
         - {x: -8, y: -8}
         - {x: 8, y: -8}
         - {x: 8, y: 8}
+      physicsShape: []
       tessellationDetail: 0
     - serializedVersion: 2
       name: tileset_35
@@ -766,6 +836,7 @@ TextureImporter:
         - {x: -8, y: -8}
         - {x: 8, y: -8}
         - {x: 8, y: 8}
+      physicsShape: []
       tessellationDetail: 0
     - serializedVersion: 2
       name: tileset_36
@@ -783,6 +854,7 @@ TextureImporter:
         - {x: -8, y: -8}
         - {x: 8, y: -8}
         - {x: 8, y: 8}
+      physicsShape: []
       tessellationDetail: 0
     - serializedVersion: 2
       name: tileset_38
@@ -800,6 +872,7 @@ TextureImporter:
         - {x: -8, y: -8}
         - {x: 8, y: -8}
         - {x: 8, y: 8}
+      physicsShape: []
       tessellationDetail: 0
     - serializedVersion: 2
       name: tileset_39
@@ -817,6 +890,7 @@ TextureImporter:
         - {x: -8, y: -8}
         - {x: 8, y: -8}
         - {x: 8, y: 8}
+      physicsShape: []
       tessellationDetail: 0
     - serializedVersion: 2
       name: tileset_40
@@ -834,6 +908,7 @@ TextureImporter:
         - {x: -8, y: -8}
         - {x: 8, y: -8}
         - {x: 8, y: 8}
+      physicsShape: []
       tessellationDetail: 0
     - serializedVersion: 2
       name: tileset_41
@@ -851,6 +926,7 @@ TextureImporter:
         - {x: -8, y: -8}
         - {x: 8, y: -8}
         - {x: 8, y: 8}
+      physicsShape: []
       tessellationDetail: 0
     - serializedVersion: 2
       name: tileset_42
@@ -868,6 +944,7 @@ TextureImporter:
         - {x: -8, y: -8}
         - {x: 8, y: -8}
         - {x: 8, y: 8}
+      physicsShape: []
       tessellationDetail: 0
     - serializedVersion: 2
       name: tileset_43
@@ -885,6 +962,7 @@ TextureImporter:
         - {x: -8, y: -8}
         - {x: 8, y: -8}
         - {x: 8, y: 8}
+      physicsShape: []
       tessellationDetail: 0
     - serializedVersion: 2
       name: tileset_44
@@ -902,6 +980,7 @@ TextureImporter:
         - {x: -8, y: -8}
         - {x: 8, y: -8}
         - {x: 8, y: 8}
+      physicsShape: []
       tessellationDetail: 0
     - serializedVersion: 2
       name: tileset_45
@@ -919,6 +998,7 @@ TextureImporter:
         - {x: -8, y: -8}
         - {x: 8, y: -8}
         - {x: 8, y: 8}
+      physicsShape: []
       tessellationDetail: 0
     - serializedVersion: 2
       name: tileset_46
@@ -936,6 +1016,7 @@ TextureImporter:
         - {x: -8, y: -8}
         - {x: 8, y: -8}
         - {x: 8, y: 8}
+      physicsShape: []
       tessellationDetail: 0
     - serializedVersion: 2
       name: tileset_47
@@ -953,6 +1034,7 @@ TextureImporter:
         - {x: -8, y: -8}
         - {x: 8, y: -8}
         - {x: 8, y: 8}
+      physicsShape: []
       tessellationDetail: 0
     - serializedVersion: 2
       name: tileset_49
@@ -970,6 +1052,7 @@ TextureImporter:
         - {x: -8, y: -8}
         - {x: 8, y: -8}
         - {x: 8, y: 8}
+      physicsShape: []
       tessellationDetail: 0
     - serializedVersion: 2
       name: tileset_50
@@ -987,6 +1070,7 @@ TextureImporter:
         - {x: -8, y: -8}
         - {x: 8, y: -8}
         - {x: 8, y: 8}
+      physicsShape: []
       tessellationDetail: 0
     - serializedVersion: 2
       name: tileset_52
@@ -1004,6 +1088,7 @@ TextureImporter:
         - {x: -8, y: -8}
         - {x: 8, y: -8}
         - {x: 8, y: 8}
+      physicsShape: []
       tessellationDetail: 0
     - serializedVersion: 2
       name: tileset_53
@@ -1021,6 +1106,7 @@ TextureImporter:
         - {x: -8, y: -8}
         - {x: 8, y: -8}
         - {x: 8, y: 8}
+      physicsShape: []
       tessellationDetail: 0
     - serializedVersion: 2
       name: tileset_54
@@ -1038,6 +1124,7 @@ TextureImporter:
         - {x: -8, y: -8}
         - {x: 8, y: -8}
         - {x: 8, y: 8}
+      physicsShape: []
       tessellationDetail: 0
     - serializedVersion: 2
       name: tileset_55
@@ -1055,6 +1142,7 @@ TextureImporter:
         - {x: -8, y: -8}
         - {x: 8, y: -8}
         - {x: 8, y: 8}
+      physicsShape: []
       tessellationDetail: 0
     - serializedVersion: 2
       name: tileset_56
@@ -1072,6 +1160,7 @@ TextureImporter:
         - {x: -8, y: -8}
         - {x: 8, y: -8}
         - {x: 8, y: 8}
+      physicsShape: []
       tessellationDetail: 0
     - serializedVersion: 2
       name: tileset_57
@@ -1089,6 +1178,7 @@ TextureImporter:
         - {x: -8, y: -8}
         - {x: 8, y: -8}
         - {x: 8, y: 8}
+      physicsShape: []
       tessellationDetail: 0
     - serializedVersion: 2
       name: tileset_58
@@ -1106,6 +1196,7 @@ TextureImporter:
         - {x: -8, y: -8}
         - {x: 8, y: -8}
         - {x: 8, y: 8}
+      physicsShape: []
       tessellationDetail: 0
     - serializedVersion: 2
       name: tileset_59
@@ -1123,6 +1214,7 @@ TextureImporter:
         - {x: -8, y: -8}
         - {x: 8, y: -8}
         - {x: 8, y: 8}
+      physicsShape: []
       tessellationDetail: 0
     - serializedVersion: 2
       name: tileset_60
@@ -1140,6 +1232,7 @@ TextureImporter:
         - {x: -8, y: -8}
         - {x: 8, y: -8}
         - {x: 8, y: 8}
+      physicsShape: []
       tessellationDetail: 0
     - serializedVersion: 2
       name: tileset_61
@@ -1157,6 +1250,7 @@ TextureImporter:
         - {x: -8, y: -8}
         - {x: 8, y: -8}
         - {x: 8, y: 8}
+      physicsShape: []
       tessellationDetail: 0
     - serializedVersion: 2
       name: tileset_62
@@ -1174,6 +1268,7 @@ TextureImporter:
         - {x: -8, y: -8}
         - {x: 8, y: -8}
         - {x: 8, y: 8}
+      physicsShape: []
       tessellationDetail: 0
     - serializedVersion: 2
       name: tileset_63
@@ -1191,6 +1286,7 @@ TextureImporter:
         - {x: -8, y: -8}
         - {x: 8, y: -8}
         - {x: 8, y: 8}
+      physicsShape: []
       tessellationDetail: 0
     - serializedVersion: 2
       name: tileset_64
@@ -1208,6 +1304,7 @@ TextureImporter:
         - {x: -8, y: -8}
         - {x: 8, y: -8}
         - {x: 8, y: 8}
+      physicsShape: []
       tessellationDetail: 0
     - serializedVersion: 2
       name: tileset_65
@@ -1225,6 +1322,7 @@ TextureImporter:
         - {x: -8, y: -8}
         - {x: 8, y: -8}
         - {x: 8, y: 8}
+      physicsShape: []
       tessellationDetail: 0
     - serializedVersion: 2
       name: tileset_66
@@ -1242,6 +1340,7 @@ TextureImporter:
         - {x: -8, y: -8}
         - {x: 8, y: -8}
         - {x: 8, y: 8}
+      physicsShape: []
       tessellationDetail: 0
     - serializedVersion: 2
       name: tileset_67
@@ -1259,6 +1358,7 @@ TextureImporter:
         - {x: -8, y: -8}
         - {x: 8, y: -8}
         - {x: 8, y: 8}
+      physicsShape: []
       tessellationDetail: 0
     - serializedVersion: 2
       name: tileset_68
@@ -1276,6 +1376,7 @@ TextureImporter:
         - {x: -8, y: -8}
         - {x: 8, y: -8}
         - {x: 8, y: 8}
+      physicsShape: []
       tessellationDetail: 0
     - serializedVersion: 2
       name: tileset_69
@@ -1293,6 +1394,7 @@ TextureImporter:
         - {x: -8, y: -8}
         - {x: 8, y: -8}
         - {x: 8, y: 8}
+      physicsShape: []
       tessellationDetail: 0
     - serializedVersion: 2
       name: tileset_70
@@ -1310,6 +1412,7 @@ TextureImporter:
         - {x: -8, y: -8}
         - {x: 8, y: -8}
         - {x: 8, y: 8}
+      physicsShape: []
       tessellationDetail: 0
     - serializedVersion: 2
       name: tileset_71
@@ -1327,6 +1430,7 @@ TextureImporter:
         - {x: -8, y: -8}
         - {x: 8, y: -8}
         - {x: 8, y: 8}
+      physicsShape: []
       tessellationDetail: 0
     - serializedVersion: 2
       name: tileset_72
@@ -1344,6 +1448,7 @@ TextureImporter:
         - {x: -8, y: -8}
         - {x: 8, y: -8}
         - {x: 8, y: 8}
+      physicsShape: []
       tessellationDetail: 0
     - serializedVersion: 2
       name: tileset_73
@@ -1361,6 +1466,7 @@ TextureImporter:
         - {x: -8, y: -8}
         - {x: 8, y: -8}
         - {x: 8, y: 8}
+      physicsShape: []
       tessellationDetail: 0
     - serializedVersion: 2
       name: tileset_74
@@ -1378,6 +1484,7 @@ TextureImporter:
         - {x: -8, y: -8}
         - {x: 8, y: -8}
         - {x: 8, y: 8}
+      physicsShape: []
       tessellationDetail: 0
     - serializedVersion: 2
       name: tileset_75
@@ -1395,6 +1502,7 @@ TextureImporter:
         - {x: -8, y: -8}
         - {x: 8, y: -8}
         - {x: 8, y: 8}
+      physicsShape: []
       tessellationDetail: 0
     - serializedVersion: 2
       name: tileset_76
@@ -1412,6 +1520,7 @@ TextureImporter:
         - {x: -8, y: -8}
         - {x: 8, y: -8}
         - {x: 8, y: 8}
+      physicsShape: []
       tessellationDetail: 0
     - serializedVersion: 2
       name: tileset_77
@@ -1429,6 +1538,7 @@ TextureImporter:
         - {x: -8, y: -8}
         - {x: 8, y: -8}
         - {x: 8, y: 8}
+      physicsShape: []
       tessellationDetail: 0
     - serializedVersion: 2
       name: tileset_78
@@ -1446,6 +1556,7 @@ TextureImporter:
         - {x: -8, y: -8}
         - {x: 8, y: -8}
         - {x: 8, y: 8}
+      physicsShape: []
       tessellationDetail: 0
     - serializedVersion: 2
       name: tileset_79
@@ -1463,6 +1574,7 @@ TextureImporter:
         - {x: -8, y: -8}
         - {x: 8, y: -8}
         - {x: 8, y: 8}
+      physicsShape: []
       tessellationDetail: 0
     - serializedVersion: 2
       name: tileset_80
@@ -1480,6 +1592,7 @@ TextureImporter:
         - {x: -8, y: -8}
         - {x: 8, y: -8}
         - {x: 8, y: 8}
+      physicsShape: []
       tessellationDetail: 0
     - serializedVersion: 2
       name: tileset_81
@@ -1497,6 +1610,7 @@ TextureImporter:
         - {x: -8, y: -8}
         - {x: 8, y: -8}
         - {x: 8, y: 8}
+      physicsShape: []
       tessellationDetail: 0
     - serializedVersion: 2
       name: tileset_82
@@ -1514,6 +1628,7 @@ TextureImporter:
         - {x: -8, y: -8}
         - {x: 8, y: -8}
         - {x: 8, y: 8}
+      physicsShape: []
       tessellationDetail: 0
     - serializedVersion: 2
       name: tileset_83
@@ -1531,6 +1646,7 @@ TextureImporter:
         - {x: -8, y: -8}
         - {x: 8, y: -8}
         - {x: 8, y: 8}
+      physicsShape: []
       tessellationDetail: 0
     - serializedVersion: 2
       name: tileset_84
@@ -1548,6 +1664,7 @@ TextureImporter:
         - {x: -8, y: -8}
         - {x: 8, y: -8}
         - {x: 8, y: 8}
+      physicsShape: []
       tessellationDetail: 0
     - serializedVersion: 2
       name: tileset_85
@@ -1565,6 +1682,7 @@ TextureImporter:
         - {x: -8, y: -8}
         - {x: 8, y: -8}
         - {x: 8, y: 8}
+      physicsShape: []
       tessellationDetail: 0
     - serializedVersion: 2
       name: tileset_86
@@ -1582,6 +1700,7 @@ TextureImporter:
         - {x: -8, y: -8}
         - {x: 8, y: -8}
         - {x: 8, y: 8}
+      physicsShape: []
       tessellationDetail: 0
     - serializedVersion: 2
       name: tileset_87
@@ -1599,6 +1718,7 @@ TextureImporter:
         - {x: -8, y: -8}
         - {x: 8, y: -8}
         - {x: 8, y: 8}
+      physicsShape: []
       tessellationDetail: 0
     - serializedVersion: 2
       name: tileset_88
@@ -1616,8 +1736,10 @@ TextureImporter:
         - {x: -8, y: -8}
         - {x: 8, y: -8}
         - {x: 8, y: 8}
+      physicsShape: []
       tessellationDetail: 0
     outline: []
+    physicsShape: []
   spritePackingTag: 
   userData: 
   assetBundleName: 
