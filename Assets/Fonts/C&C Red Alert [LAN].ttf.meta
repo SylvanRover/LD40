@@ -1,0 +1,22 @@
+fileFormatVersion: 2
+guid: c066f2013c18a004eaa5790defb5aef7
+timeCreated: 1512239090
+licenseType: Pro
+TrueTypeFontImporter:
+  externalObjects: {}
+  serializedVersion: 4
+  fontSize: 16
+  forceTextureCase: -2
+  characterSpacing: 0
+  characterPadding: 1
+  includeFontData: 1
+  fontName: C&C Red Alert [LAN]
+  fontNames:
+  - C&C Red Alert [LAN]
+  fallbackFontReferences: []
+  customCharacters: 
+  fontRenderingMode: 0
+  ascentCalculationMode: 1
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
