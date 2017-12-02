@@ -32,11 +32,10 @@ public class TechTree : MonoBehaviour {
 	}
 
 	void UpgradeStation (int i) {
-		var stationLevel = stations[i].level;
-		stationLevel += 1;
+		stations[i].level += 1;
 		var stationObject = stations[i].target.GetComponent<StationObject>();
 		stationObject.SpriteLevel(stations[i].level);
-		profit -= stations[i].cost[stationLevel];
+		profit -= stations[i].cost[stations[i].level];
 		if (profit < 0){
 			profitNumber.text = "-$" + Mathf.Abs(profit).ToString();
 			profitNumber.color = negativeProfitColor;
@@ -62,12 +61,14 @@ public class TechTree : MonoBehaviour {
 
 
 	void ProfitRate(){
-		for(int i = 0; i < stations.Length; ++i) {			
-			income += stations[i].income[stations[i].level];
+		float f = income;
+		for(int i = 0; i < stations.Length; ++i) {
+			f = stations[i].income[stations[i].level];
+			Debug.Log(stations[i] + " " + i + " " + f);		
 		}
-		Debug.Log("Income is " + income);
-		Debug.Log("Wages are " + wages);
-		Debug.Log("Profit is " + profit);
+		if (f != income){
+			income = f;
+		}
 		profit = profit + income - wages;
 		incomeNumber.text = income.ToString();
 		wagesNumber.text = wages.ToString();
