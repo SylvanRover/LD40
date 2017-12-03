@@ -50,7 +50,7 @@ public class GameController : MonoBehaviour {
 			for(int i = 0; i < stations.Length; ++i){
 				stations[i].interactable = stations[i].target.GetComponent<StationObject>().interactable;
 				if (stations[i].interactable){
-					SpawnWorker(i, workerName);
+					UpgradeWorker(i, workerName);
 				}				
 			}
 		}
@@ -66,7 +66,7 @@ public class GameController : MonoBehaviour {
 		}
 	}
 
-	void SpawnWorker(int i, string w){
+	void UpgradeWorker(int i, string w){
 			StationObject stationObject = stations[i].target.GetComponent<StationObject>();
 		if (stations[i].target.GetComponent<StationObject>().workerSpawn != null){
 			if (!stationObject.jobFull){

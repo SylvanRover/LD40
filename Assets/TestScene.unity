@@ -1610,6 +1610,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   baseIncome: 0
   incomeRate: 1
+  tempIncomeRate: 1
   wages: 0
   profit: 20
   incomeTitle: 'INCOME<size=20>(py)</size>:'
