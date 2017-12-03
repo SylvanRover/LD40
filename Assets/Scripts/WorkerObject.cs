@@ -14,7 +14,10 @@ public class WorkerObject : MonoBehaviour {
 	public float[] income;
 	public Sprite[] spriteLevel;
 
-	void SetWorker(){
+	public void SetWorker(int i){
+		cost = new float[maxLevel+1];
+		income = new float[maxLevel+1];
+		spriteLevel = new Sprite[maxLevel+1];
 		spriteLevel[0] = Resources.Load<Sprite>("TinyRPGTown/Artwork/Sprites/rock");
 		spriteLevel[1] = Resources.Load<Sprite>("TinyRPGTown/Artwork/Sprites/barrel");
 		spriteLevel[2] = Resources.Load<Sprite>("TinyRPGTown/Artwork/Sprites/chest");
@@ -27,11 +30,11 @@ public class WorkerObject : MonoBehaviour {
 		cost[2] = 500;
 		cost[3] = 3000;
 		cost[4] = 10000;
-		income[0] = 0f;
-		income[1] = 0.1f;
-		income[2] = 0.4f;
-		income[3] = 1f;
-		income[4] = 4f;
+		income[0] = 0.5f;
+		income[1] = 0.4f;
+		income[2] = 1f;
+		income[3] = 4f;
+		income[4] = 10f;
 	}
 	
 	

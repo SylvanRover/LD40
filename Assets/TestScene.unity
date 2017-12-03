@@ -1608,7 +1608,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: bbf0b1a0d9ec25e4481f414a6bf8d730, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  baseIncome: 1
+  baseIncome: 0
   incomeRate: 1
   wages: 0
   profit: 20

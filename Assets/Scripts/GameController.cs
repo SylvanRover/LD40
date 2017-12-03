@@ -7,6 +7,7 @@ public class GameController : MonoBehaviour {
 
 	public float baseIncome = 10;
 	public float incomeRate = 1;
+	public float tempIncomeRate = 1;
 	public float wages = 0;
 	public float profit = 0;
 	public string incomeTitle = "INCOME<size=20>(py)</size>:";
@@ -75,13 +76,14 @@ public class GameController : MonoBehaviour {
 				worker.transform.parent = stationObject.workerSpawn;
 				stationObject.jobFull = true;
 				workerObject.id = i;
+				ProfitRate();
 			}
 		}
 	}
 
 	void ProfitRate(){
 		
-		float f = 1;
+		float f = 0;
 
 		for(int i = 0; i < stations.Length; ++i) {
 			f += stations[i].income[stations[i].level];
@@ -89,18 +91,22 @@ public class GameController : MonoBehaviour {
 		if (f != baseIncome){
 			baseIncome = f;
 		}
-
 		GameObject[] worker = GameObject.FindGameObjectsWithTag("Worker");
-		float tempIncomeRate = incomeRate;
+		float tempTemp = 1;
 		for(int i = 0; i < worker.Length; ++i) {
 			WorkerObject workerObject = worker[i].GetComponent<WorkerObject>();
-			//incomeRate *= workerObject.income[workerObject.level];
-			//worker[i].income[stations[i].level];
+			workerObject.SetWorker(workerObject.id);
+			tempTemp += workerObject.income[workerObject.level];
+		}
+		if (tempTemp != tempIncomeRate){
+			tempIncomeRate = tempTemp;
 		}
 		if (tempIncomeRate != incomeRate){
-			incomeRate = tempIncomeRate;
+				incomeRate = tempIncomeRate;
+				baseIncome *= incomeRate;
+				Debug.Log("Income Rate is " + baseIncome);
+				Debug.Log("Temp is " + tempIncomeRate);
 		}
-		Debug.Log(incomeRate);
 
 		SetCashTextValue(baseIncome*=incomeRate, incomeNumber);
 		SetCashTextValue(wages, wagesNumber);
@@ -108,19 +114,19 @@ public class GameController : MonoBehaviour {
 	}
 
 	void ApplyProfitRate(){
-		profit += (baseIncome * incomeRate) - wages;
+		profit += (baseIncome - wages);
 		ProfitRate();
 	}
 
 	void SetCashTextValue(float c, Text t){
 		if (c < 0){
-			t.text = "-$" + Mathf.Abs(c).ToString("F0");
+			t.text = "-$" + Mathf.Abs(c).ToString("F2");
 			t.color = negativeProfitColor;
 		} else if (c == 0){
-			t.text = "$" + Mathf.Abs(c).ToString("F0");
+			t.text = "$" + Mathf.Abs(c).ToString("F2");
 			t.color = positiveProfitColor;
 		} else {
-			t.text = "$" + Mathf.Abs(c).ToString("F0");
+			t.text = "$" + Mathf.Abs(c).ToString("F2");
 		}
 	}
 
