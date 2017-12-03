@@ -24,9 +24,10 @@ GameObject:
   - component: {fileID: 58172608811801238}
   - component: {fileID: 114498893105164364}
   - component: {fileID: 50650037238866796}
+  - component: {fileID: 114816921636992796}
   m_Layer: 0
   m_Name: Worker_01
-  m_TagString: Player
+  m_TagString: Worker
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -107,6 +108,25 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: bb187b7914cb04349bc44321c7582d2e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!114 &114816921636992796
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1817538130528526}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 655bce5cf38f08e4d9b0d2db0c055032, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  gameController: {fileID: 0}
+  name: Laborer
+  id: 0
+  level: 0
+  maxLevel: 4
+  cost: []
+  income: []
+  spriteLevel: []
 --- !u!212 &212484513100920546
 SpriteRenderer:
   m_ObjectHideFlags: 1

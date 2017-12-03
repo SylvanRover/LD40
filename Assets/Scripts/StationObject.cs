@@ -3,8 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 
 public class StationObject : MonoBehaviour {
-
-	public TechTree techTree;
+	
 	private SpriteRenderer mySpriteRenderer;
 	public bool interactable = false;
 	public Transform workerSpawn;

@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
 
-public class TechTree : MonoBehaviour {
+public class GameController : MonoBehaviour {
 
 	public float baseIncome = 10;
 	public float incomeRate = 1;
@@ -65,29 +65,44 @@ public class TechTree : MonoBehaviour {
 		}
 	}
 
-	void SpawnWorker(int i, string worker){
+	void SpawnWorker(int i, string w){
 			StationObject stationObject = stations[i].target.GetComponent<StationObject>();
 		if (stations[i].target.GetComponent<StationObject>().workerSpawn != null){
 			if (!stationObject.jobFull){
-				GameObject workerObject = Instantiate(Resources.Load<GameObject>("Prefabs/" + worker));
-				workerObject.transform.position = stationObject.workerSpawn.position;
-				workerObject.transform.parent = stationObject.workerSpawn;
+				GameObject worker = Instantiate(Resources.Load<GameObject>("Prefabs/" + w));
+				WorkerObject workerObject = worker.GetComponent<WorkerObject>();
+				worker.transform.position = stationObject.workerSpawn.position;
+				worker.transform.parent = stationObject.workerSpawn;
 				stationObject.jobFull = true;
+				workerObject.id = i;
 			}
 		}
 	}
 
 	void ProfitRate(){
+		
 		float f = 1;
+
 		for(int i = 0; i < stations.Length; ++i) {
-			//if(stations[i].income[stations[i].level] != 0){
-				f += stations[i].income[stations[i].level];
-			//}
+			f += stations[i].income[stations[i].level];
 		}
-		if (f != incomeRate){
-			incomeRate = f;
+		if (f != baseIncome){
+			baseIncome = f;
 		}
-		SetCashTextValue(baseIncome*incomeRate, incomeNumber);
+
+		GameObject[] worker = GameObject.FindGameObjectsWithTag("Worker");
+		float tempIncomeRate = incomeRate;
+		for(int i = 0; i < worker.Length; ++i) {
+			WorkerObject workerObject = worker[i].GetComponent<WorkerObject>();
+			//incomeRate *= workerObject.income[workerObject.level];
+			//worker[i].income[stations[i].level];
+		}
+		if (tempIncomeRate != incomeRate){
+			incomeRate = tempIncomeRate;
+		}
+		Debug.Log(incomeRate);
+
+		SetCashTextValue(baseIncome*=incomeRate, incomeNumber);
 		SetCashTextValue(wages, wagesNumber);
 		SetCashTextValue(profit, profitNumber);
 	}
@@ -326,10 +341,10 @@ public class TechTree : MonoBehaviour {
 				stations[i].cost[3] = 3000;
 				stations[i].cost[4] = 10000;
 				stations[i].income[0] = 0f;
-				stations[i].income[1] = 1f;
-				stations[i].income[2] = 4f;
-				stations[i].income[3] = 10f;
-				stations[i].income[4] = 40f;
+				stations[i].income[1] = 0.1f;
+				stations[i].income[2] = 0.4f;
+				stations[i].income[3] = 1f;
+				stations[i].income[4] = 4f;
 			}
 		}
 	}
@@ -362,6 +377,7 @@ public class Station {
 [System.Serializable]
 public class Worker {
 	public string name;
+	public int id;
 	public GameObject target;
 	public int level;
 	public int maxLevel;
@@ -370,8 +386,9 @@ public class Worker {
 	public float[] income;
 	public bool interactable = false;
 
-	public Worker(string newName, GameObject newTarget, int newLevel, int newMaxLevel, Sprite[] newSpriteLevel, float[] newCost, float[] newIncome, bool newInteractable) {
+	public Worker(string newName, int newId, GameObject newTarget, int newLevel, int newMaxLevel, Sprite[] newSpriteLevel, float[] newCost, float[] newIncome, bool newInteractable) {
 		name = newName;
+		id = newId;
 		target = newTarget;
 		level = newLevel;
 		maxLevel = newMaxLevel;

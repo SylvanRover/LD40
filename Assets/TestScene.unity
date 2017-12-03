@@ -700,9 +700,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9886982ae4ea1ee42ac1c353355a2e90, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  techTree: {fileID: 1134911299}
   interactable: 0
-  workerSpawn: {fileID: 0}
+  workerSpawn: {fileID: 335423259}
+  jobFull: 0
 --- !u!58 &239527388
 CircleCollider2D:
   m_ObjectHideFlags: 0
@@ -782,9 +782,94 @@ Transform:
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: -12.13, y: 3.29, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
-  m_Children: []
+  m_Children:
+  - {fileID: 335423259}
   m_Father: {fileID: 1134911300}
   m_RootOrder: 4
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &335423258
+GameObject:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  serializedVersion: 5
+  m_Component:
+  - component: {fileID: 335423259}
+  m_Layer: 0
+  m_Name: Worker Spawn (4)
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &335423259
+Transform:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 335423258}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: -1.3199997, y: -0.7600002, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 239527391}
+  m_RootOrder: 0
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &338032624
+GameObject:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  serializedVersion: 5
+  m_Component:
+  - component: {fileID: 338032625}
+  m_Layer: 0
+  m_Name: Worker Spawn (5)
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &338032625
+Transform:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 338032624}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: -1.3199997, y: -0.7600002, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 1865680786}
+  m_RootOrder: 0
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &449587372
+GameObject:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  serializedVersion: 5
+  m_Component:
+  - component: {fileID: 449587373}
+  m_Layer: 0
+  m_Name: Worker Spawn (3)
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &449587373
+Transform:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 449587372}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: -1.3199997, y: -0.7600002, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 1617506123}
+  m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &453291377
 GameObject:
@@ -795,7 +880,7 @@ GameObject:
   m_Component:
   - component: {fileID: 453291378}
   m_Layer: 0
-  m_Name: Worker Spawn
+  m_Name: Worker Spawn (0)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -812,6 +897,34 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 1360521940}
+  m_RootOrder: 0
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &560842354
+GameObject:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  serializedVersion: 5
+  m_Component:
+  - component: {fileID: 560842355}
+  m_Layer: 0
+  m_Name: Worker Spawn (2)
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &560842355
+Transform:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 560842354}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: -1.3199997, y: -0.7600002, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 1898510237}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &654491344
@@ -1293,9 +1406,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9886982ae4ea1ee42ac1c353355a2e90, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  techTree: {fileID: 1134911299}
   interactable: 0
-  workerSpawn: {fileID: 0}
+  workerSpawn: {fileID: 1825831605}
+  jobFull: 0
 --- !u!58 &1003872854
 CircleCollider2D:
   m_ObjectHideFlags: 0
@@ -1375,7 +1488,8 @@ Transform:
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: -2.27, y: 2.25, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
-  m_Children: []
+  m_Children:
+  - {fileID: 1825831605}
   m_Father: {fileID: 1134911300}
   m_RootOrder: 5
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -1477,8 +1591,8 @@ GameObject:
   - component: {fileID: 1134911300}
   - component: {fileID: 1134911299}
   m_Layer: 0
-  m_Name: Stations
-  m_TagString: Untagged
+  m_Name: GameController
+  m_TagString: GameController
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -1576,6 +1690,7 @@ MonoBehaviour:
     cost: []
     income: []
     interactable: 0
+  workerName: Worker_01
 --- !u!4 &1134911300
 Transform:
   m_ObjectHideFlags: 0
@@ -1726,9 +1841,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9886982ae4ea1ee42ac1c353355a2e90, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  techTree: {fileID: 1134911299}
   interactable: 0
   workerSpawn: {fileID: 453291378}
+  jobFull: 0
 --- !u!58 &1360521937
 CircleCollider2D:
   m_ObjectHideFlags: 0
@@ -1811,6 +1926,34 @@ Transform:
   m_Children:
   - {fileID: 453291378}
   m_Father: {fileID: 1134911300}
+  m_RootOrder: 0
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &1377345201
+GameObject:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  serializedVersion: 5
+  m_Component:
+  - component: {fileID: 1377345202}
+  m_Layer: 0
+  m_Name: Worker Spawn (1)
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1377345202
+Transform:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1377345201}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: -1.3199997, y: -0.7600002, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 1754057970}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1588807340
@@ -1952,9 +2095,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9886982ae4ea1ee42ac1c353355a2e90, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  techTree: {fileID: 1134911299}
   interactable: 0
-  workerSpawn: {fileID: 0}
+  workerSpawn: {fileID: 449587373}
+  jobFull: 0
 --- !u!58 &1617506120
 CircleCollider2D:
   m_ObjectHideFlags: 0
@@ -2034,7 +2177,8 @@ Transform:
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: -14.33, y: -7.62, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
-  m_Children: []
+  m_Children:
+  - {fileID: 449587373}
   m_Father: {fileID: 1134911300}
   m_RootOrder: 3
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -2120,7 +2264,7 @@ RectTransform:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 1648541853}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 566, y: 318.5, z: 0}
+  m_LocalPosition: {x: 605.5, y: 340.5, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 865548035}
@@ -2294,7 +2438,8 @@ Transform:
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: 5.49, y: -7.67, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
-  m_Children: []
+  m_Children:
+  - {fileID: 1377345202}
   m_Father: {fileID: 1134911300}
   m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -2324,9 +2469,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9886982ae4ea1ee42ac1c353355a2e90, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  techTree: {fileID: 1134911299}
   interactable: 0
-  workerSpawn: {fileID: 0}
+  workerSpawn: {fileID: 1377345202}
+  jobFull: 0
 --- !u!114 &1754057973
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -10148,6 +10293,34 @@ Tilemap:
     m_DirtyIndex: 0
   - serializedVersion: 1
     m_DirtyIndex: 0
+--- !u!1 &1825831604
+GameObject:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  serializedVersion: 5
+  m_Component:
+  - component: {fileID: 1825831605}
+  m_Layer: 0
+  m_Name: Worker Spawn (4)
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1825831605
+Transform:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1825831604}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: -1.3199997, y: -0.7600002, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 1003872857}
+  m_RootOrder: 0
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1865680780
 GameObject:
   m_ObjectHideFlags: 0
@@ -10199,9 +10372,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9886982ae4ea1ee42ac1c353355a2e90, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  techTree: {fileID: 1134911299}
   interactable: 0
-  workerSpawn: {fileID: 0}
+  workerSpawn: {fileID: 338032625}
+  jobFull: 0
 --- !u!58 &1865680783
 CircleCollider2D:
   m_ObjectHideFlags: 0
@@ -10281,7 +10454,8 @@ Transform:
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: 8.48, y: 2.07, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
-  m_Children: []
+  m_Children:
+  - {fileID: 338032625}
   m_Father: {fileID: 1134911300}
   m_RootOrder: 6
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -10336,9 +10510,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9886982ae4ea1ee42ac1c353355a2e90, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  techTree: {fileID: 1134911299}
   interactable: 0
-  workerSpawn: {fileID: 0}
+  workerSpawn: {fileID: 560842355}
+  jobFull: 0
 --- !u!58 &1898510234
 CircleCollider2D:
   m_ObjectHideFlags: 0
@@ -10418,7 +10592,8 @@ Transform:
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: -5.48, y: -8.32, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
-  m_Children: []
+  m_Children:
+  - {fileID: 560842355}
   m_Father: {fileID: 1134911300}
   m_RootOrder: 2
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -10448,7 +10623,7 @@ RectTransform:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 1944151922}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 318.5, z: 0}
+  m_LocalPosition: {x: 0, y: 340.5, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 1350825563}
