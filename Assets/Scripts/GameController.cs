@@ -92,14 +92,11 @@ public class GameController : MonoBehaviour {
 			baseIncome = f;
 		}
 		GameObject[] worker = GameObject.FindGameObjectsWithTag("Worker");
-		float tempTemp = 1;
+		float tempIncomeRate = 1;
 		for(int i = 0; i < worker.Length; ++i) {
 			WorkerObject workerObject = worker[i].GetComponent<WorkerObject>();
 			workerObject.SetWorker(workerObject.id);
-			tempTemp += workerObject.income[workerObject.level];
-		}
-		if (tempTemp != tempIncomeRate){
-			tempIncomeRate = tempTemp;
+			tempIncomeRate += workerObject.income[workerObject.level];
 		}
 		if (tempIncomeRate != incomeRate){
 				incomeRate = tempIncomeRate;

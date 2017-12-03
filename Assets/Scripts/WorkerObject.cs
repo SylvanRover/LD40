@@ -1,8 +1,11 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
 
 public class WorkerObject : MonoBehaviour {
+	
+	private Dictionary<string,Sprite> sprites;
 
 	public GameController gameController;
 	private Worker[] worker;
@@ -14,15 +17,32 @@ public class WorkerObject : MonoBehaviour {
 	public float[] income;
 	public Sprite[] spriteLevel;
 
-	public void SetWorker(int i){
+	private void LoadDictionary() {
+		Sprite[] SpritesData = Resources.LoadAll<Sprite>("TinyRPGTown/Artwork/Sprites/npc");
+		sprites = new Dictionary<string, Sprite>();
+
+		for (int i = 0; i < SpritesData.Length; i++) {
+			sprites.Add(SpritesData[i].name, SpritesData[i]);
+		}
+	}
+
+	public Sprite GetSpriteByName(string name) {
+		if (sprites.ContainsKey(name))
+			return sprites[name];
+		else 
+			return null;
+	}
+
+	public void SetWorker(int i){	
+		LoadDictionary();	
 		cost = new float[maxLevel+1];
 		income = new float[maxLevel+1];
 		spriteLevel = new Sprite[maxLevel+1];
-		spriteLevel[0] = Resources.Load<Sprite>("TinyRPGTown/Artwork/Sprites/rock");
-		spriteLevel[1] = Resources.Load<Sprite>("TinyRPGTown/Artwork/Sprites/barrel");
-		spriteLevel[2] = Resources.Load<Sprite>("TinyRPGTown/Artwork/Sprites/chest");
-		spriteLevel[3] = Resources.Load<Sprite>("TinyRPGTown/Artwork/Sprites/building-thin");
-		spriteLevel[4] = Resources.Load<Sprite>("TinyRPGTown/Artwork/Sprites/Building");
+		spriteLevel[0] = GetSpriteByName("npc_0");
+		spriteLevel[1] = GetSpriteByName("npc_3");
+		spriteLevel[2] = GetSpriteByName("npc_6");
+		spriteLevel[3] = GetSpriteByName("npc_9");
+		spriteLevel[4] = GetSpriteByName("npc_12");
 		SpriteRenderer stationSprite = GetComponent<SpriteRenderer>();
 		stationSprite.sprite = spriteLevel[level];
 		cost[0] = 10;
@@ -35,7 +55,5 @@ public class WorkerObject : MonoBehaviour {
 		income[2] = 1f;
 		income[3] = 4f;
 		income[4] = 10f;
-	}
-	
-	
+	}	
 }
