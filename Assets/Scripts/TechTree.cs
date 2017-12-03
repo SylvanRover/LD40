@@ -5,7 +5,8 @@ using UnityEngine.UI;
 
 public class TechTree : MonoBehaviour {
 
-	public float income = 0;
+	public float baseIncome = 10;
+	public float incomeRate = 1;
 	public float wages = 0;
 	public float profit = 0;
 	public string incomeTitle = "INCOME<size=20>(py)</size>:";
@@ -18,6 +19,7 @@ public class TechTree : MonoBehaviour {
 	public Text profitText;
 	public Text profitNumber;
 	public Color negativeProfitColor;
+	public Color positiveProfitColor;
 	private KeyCode buttonInteract;
 	public Station[] stations;
 
@@ -28,24 +30,7 @@ public class TechTree : MonoBehaviour {
 			stations[i].interactable = stations[i].target.GetComponent<StationObject>().interactable;		
 		}
 		SetStations();
-		InvokeRepeating("ProfitRate", 0f, 5f);
-	}
-
-	void UpgradeStation (int i) {
-		stations[i].level += 1;
-		var stationObject = stations[i].target.GetComponent<StationObject>();
-		stationObject.SpriteLevel(stations[i].level);
-		profit -= stations[i].cost[stations[i].level];
-		if (profit < 0){
-			profitNumber.text = "-$" + Mathf.Abs(profit).ToString();
-			profitNumber.color = negativeProfitColor;
-		} else if (profit == 0){
-			profitNumber.text = "$" + Mathf.Abs(profit).ToString();
-			profitNumber.color = negativeProfitColor;
-		} else {
-			profitNumber.text = "$" + Mathf.Abs(profit).ToString();
-		}
-		profitText.text = profitTitle + ": ";
+		InvokeRepeating("ApplyProfitRate", 0f, 5f);
 	}
 
 	void Update(){
@@ -59,20 +44,45 @@ public class TechTree : MonoBehaviour {
 		}
 	}
 
+	void UpgradeStation (int i) {
+		Debug.Log(stations[i].cost[stations[i].level]);
+		profit -= stations[i].cost[stations[i].level];
+		stations[i].level += 1;
+		StationObject stationObject = stations[i].target.GetComponent<StationObject>();
+		stationObject.SpriteLevel(stations[i].level);
+		ProfitRate();
+	}
+
+	void SetCashTextValue(float c, Text t){
+		if (c < 0){
+			t.text = "-$" + Mathf.Abs(c).ToString("F0");
+			t.color = negativeProfitColor;
+		} else if (c == 0){
+			t.text = "$" + Mathf.Abs(c).ToString("F0");
+			t.color = positiveProfitColor;
+		} else {
+			t.text = "$" + Mathf.Abs(c).ToString("F0");
+		}
+	}
 
 	void ProfitRate(){
-		float f = income;
+		float f = 1;
 		for(int i = 0; i < stations.Length; ++i) {
-			f = stations[i].income[stations[i].level];
-			Debug.Log(stations[i] + " " + i + " " + f);		
+			//if(stations[i].income[stations[i].level] != 0){
+				f += stations[i].income[stations[i].level];
+			//}
 		}
-		if (f != income){
-			income = f;
+		if (f != incomeRate){
+			incomeRate = f;
 		}
-		profit = profit + income - wages;
-		incomeNumber.text = income.ToString();
-		wagesNumber.text = wages.ToString();
-		profitNumber.text = profit.ToString();
+		SetCashTextValue(baseIncome*incomeRate, incomeNumber);
+		SetCashTextValue(wages, wagesNumber);
+		SetCashTextValue(profit, profitNumber);
+	}
+
+	void ApplyProfitRate(){
+		profit += (baseIncome * incomeRate) - wages;
+		ProfitRate();
 	}
 
 	void SetStations(){
@@ -91,7 +101,7 @@ public class TechTree : MonoBehaviour {
 				stations[i].cost[3] = 3000;
 				stations[i].cost[4] = 10000;
 				stations[i].income[0] = 0f;
-				stations[i].income[1] = 0.5f;
+				stations[i].income[1] = 1f;
 				stations[i].income[2] = 4f;
 				stations[i].income[3] = 10f;
 				stations[i].income[4] = 40f;
@@ -110,7 +120,7 @@ public class TechTree : MonoBehaviour {
 				stations[i].cost[3] = 3000;
 				stations[i].cost[4] = 10000;
 				stations[i].income[0] = 0f;
-				stations[i].income[1] = 0.5f;
+				stations[i].income[1] = 1f;
 				stations[i].income[2] = 4f;
 				stations[i].income[3] = 10f;
 				stations[i].income[4] = 40f;
@@ -129,7 +139,7 @@ public class TechTree : MonoBehaviour {
 				stations[i].cost[3] = 3000;
 				stations[i].cost[4] = 10000;
 				stations[i].income[0] = 0f;
-				stations[i].income[1] = 0.5f;
+				stations[i].income[1] = 1f;
 				stations[i].income[2] = 4f;
 				stations[i].income[3] = 10f;
 				stations[i].income[4] = 40f;
@@ -148,7 +158,7 @@ public class TechTree : MonoBehaviour {
 				stations[i].cost[3] = 3000;
 				stations[i].cost[4] = 10000;
 				stations[i].income[0] = 0f;
-				stations[i].income[1] = 0.5f;
+				stations[i].income[1] = 1f;
 				stations[i].income[2] = 4f;
 				stations[i].income[3] = 10f;
 				stations[i].income[4] = 40f;
@@ -167,7 +177,7 @@ public class TechTree : MonoBehaviour {
 				stations[i].cost[3] = 3000;
 				stations[i].cost[4] = 10000;
 				stations[i].income[0] = 0f;
-				stations[i].income[1] = 0.5f;
+				stations[i].income[1] = 1f;
 				stations[i].income[2] = 4f;
 				stations[i].income[3] = 10f;
 				stations[i].income[4] = 40f;
@@ -186,7 +196,7 @@ public class TechTree : MonoBehaviour {
 				stations[i].cost[3] = 3000;
 				stations[i].cost[4] = 10000;
 				stations[i].income[0] = 0f;
-				stations[i].income[1] = 0.5f;
+				stations[i].income[1] = 1f;
 				stations[i].income[2] = 4f;
 				stations[i].income[3] = 10f;
 				stations[i].income[4] = 40f;
@@ -205,7 +215,7 @@ public class TechTree : MonoBehaviour {
 				stations[i].cost[3] = 3000;
 				stations[i].cost[4] = 10000;
 				stations[i].income[0] = 0f;
-				stations[i].income[1] = 0.5f;
+				stations[i].income[1] = 1f;
 				stations[i].income[2] = 4f;
 				stations[i].income[3] = 10f;
 				stations[i].income[4] = 40f;
