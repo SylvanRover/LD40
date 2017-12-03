@@ -7,11 +7,9 @@ public class StationObject : MonoBehaviour {
 	public TechTree techTree;
 	private SpriteRenderer mySpriteRenderer;
 	public bool interactable = false;
-	public Sprite[] spriteLevels;
 
 	void Start(){
 		mySpriteRenderer = GetComponent<SpriteRenderer>();
-		SpriteLevel(0);
 	}
 
 	void OnTriggerEnter2D(Collider2D col){	
@@ -25,10 +23,6 @@ public class StationObject : MonoBehaviour {
 			mySpriteRenderer.color = Color.white;
 			interactable = false;
 		}
-	}
-
-	public void SpriteLevel(int i){
-		mySpriteRenderer.sprite = spriteLevels[i];
 	}
 
 }

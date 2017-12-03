@@ -45,12 +45,14 @@ public class TechTree : MonoBehaviour {
 	}
 
 	void UpgradeStation (int i) {
-		Debug.Log(stations[i].cost[stations[i].level]);
-		profit -= stations[i].cost[stations[i].level];
-		stations[i].level += 1;
-		StationObject stationObject = stations[i].target.GetComponent<StationObject>();
-		stationObject.SpriteLevel(stations[i].level);
-		ProfitRate();
+		if (stations[i].level < stations[i].maxLevel){
+			Debug.Log(stations[i].cost[stations[i].level]);
+			profit -= stations[i].cost[stations[i].level];
+			stations[i].level += 1;
+			SpriteRenderer stationSprite = stations[i].target.GetComponent<SpriteRenderer>();
+			stationSprite.sprite = stations[i].spriteLevel[stations[i].level];
+			ProfitRate();
+		}
 	}
 
 	void SetCashTextValue(float c, Text t){
@@ -92,9 +94,17 @@ public class TechTree : MonoBehaviour {
 			if (i == 0){
 				stations[i].name = "Blast Furnace";
 				stations[i].level = 0;
-				stations[i].maxLevel = 5;
-				stations[i].cost = new float[stations[i].maxLevel];
-				stations[i].income = new float[stations[i].maxLevel];
+				stations[i].maxLevel = 4;
+				stations[i].cost = new float[stations[i].maxLevel+1];
+				stations[i].income = new float[stations[i].maxLevel+1];
+				stations[i].spriteLevel = new Sprite[stations[i].maxLevel+1];
+				stations[i].spriteLevel[0] = Resources.Load<Sprite>("TinyRPGTown/Artwork/Sprites/rock");
+				stations[i].spriteLevel[1] = Resources.Load<Sprite>("TinyRPGTown/Artwork/Sprites/barrel");
+				stations[i].spriteLevel[2] = Resources.Load<Sprite>("TinyRPGTown/Artwork/Sprites/chest");
+				stations[i].spriteLevel[3] = Resources.Load<Sprite>("TinyRPGTown/Artwork/Sprites/building-thin");
+				stations[i].spriteLevel[4] = Resources.Load<Sprite>("TinyRPGTown/Artwork/Sprites/Building");
+				SpriteRenderer stationSprite = stations[i].target.GetComponent<SpriteRenderer>();
+				stationSprite.sprite = stations[i].spriteLevel[stations[i].level];
 				stations[i].cost[0] = 10;
 				stations[i].cost[1] = 100;
 				stations[i].cost[2] = 500;
@@ -111,9 +121,17 @@ public class TechTree : MonoBehaviour {
 			if (i == 1){
 				stations[i].name = "Ladle Furnace";
 				stations[i].level = 0;
-				stations[i].maxLevel = 5;
-				stations[i].cost = new float[stations[i].maxLevel];
-				stations[i].income = new float[stations[i].maxLevel];
+				stations[i].maxLevel = 4;
+				stations[i].cost = new float[stations[i].maxLevel+1];
+				stations[i].income = new float[stations[i].maxLevel+1];
+				stations[i].spriteLevel = new Sprite[stations[i].maxLevel+1];
+				stations[i].spriteLevel[0] = Resources.Load<Sprite>("TinyRPGTown/Artwork/Sprites/rock");
+				stations[i].spriteLevel[1] = Resources.Load<Sprite>("TinyRPGTown/Artwork/Sprites/barrel");
+				stations[i].spriteLevel[2] = Resources.Load<Sprite>("TinyRPGTown/Artwork/Sprites/chest");
+				stations[i].spriteLevel[3] = Resources.Load<Sprite>("TinyRPGTown/Artwork/Sprites/building-thin");
+				stations[i].spriteLevel[4] = Resources.Load<Sprite>("TinyRPGTown/Artwork/Sprites/Building");
+				SpriteRenderer stationSprite = stations[i].target.GetComponent<SpriteRenderer>();
+				stationSprite.sprite = stations[i].spriteLevel[stations[i].level];
 				stations[i].cost[0] = 10;
 				stations[i].cost[1] = 100;
 				stations[i].cost[2] = 500;
@@ -130,9 +148,17 @@ public class TechTree : MonoBehaviour {
 			if (i == 2){
 				stations[i].name = "Caster";
 				stations[i].level = 0;
-				stations[i].maxLevel = 5;
-				stations[i].cost = new float[stations[i].maxLevel];
-				stations[i].income = new float[stations[i].maxLevel];
+				stations[i].maxLevel = 4;
+				stations[i].cost = new float[stations[i].maxLevel+1];
+				stations[i].income = new float[stations[i].maxLevel+1];
+				stations[i].spriteLevel = new Sprite[stations[i].maxLevel+1];
+				stations[i].spriteLevel[0] = Resources.Load<Sprite>("TinyRPGTown/Artwork/Sprites/rock");
+				stations[i].spriteLevel[1] = Resources.Load<Sprite>("TinyRPGTown/Artwork/Sprites/barrel");
+				stations[i].spriteLevel[2] = Resources.Load<Sprite>("TinyRPGTown/Artwork/Sprites/chest");
+				stations[i].spriteLevel[3] = Resources.Load<Sprite>("TinyRPGTown/Artwork/Sprites/building-thin");
+				stations[i].spriteLevel[4] = Resources.Load<Sprite>("TinyRPGTown/Artwork/Sprites/Building");
+				SpriteRenderer stationSprite = stations[i].target.GetComponent<SpriteRenderer>();
+				stationSprite.sprite = stations[i].spriteLevel[stations[i].level];
 				stations[i].cost[0] = 10;
 				stations[i].cost[1] = 100;
 				stations[i].cost[2] = 500;
@@ -149,9 +175,17 @@ public class TechTree : MonoBehaviour {
 			if (i == 3){
 				stations[i].name = "Reheat Furnace";
 				stations[i].level = 0;
-				stations[i].maxLevel = 5;
-				stations[i].cost = new float[stations[i].maxLevel];
-				stations[i].income = new float[stations[i].maxLevel];
+				stations[i].maxLevel = 4;
+				stations[i].cost = new float[stations[i].maxLevel+1];
+				stations[i].income = new float[stations[i].maxLevel+1];
+				stations[i].spriteLevel = new Sprite[stations[i].maxLevel+1];
+				stations[i].spriteLevel[0] = Resources.Load<Sprite>("TinyRPGTown/Artwork/Sprites/rock");
+				stations[i].spriteLevel[1] = Resources.Load<Sprite>("TinyRPGTown/Artwork/Sprites/barrel");
+				stations[i].spriteLevel[2] = Resources.Load<Sprite>("TinyRPGTown/Artwork/Sprites/chest");
+				stations[i].spriteLevel[3] = Resources.Load<Sprite>("TinyRPGTown/Artwork/Sprites/building-thin");
+				stations[i].spriteLevel[4] = Resources.Load<Sprite>("TinyRPGTown/Artwork/Sprites/Building");
+				SpriteRenderer stationSprite = stations[i].target.GetComponent<SpriteRenderer>();
+				stationSprite.sprite = stations[i].spriteLevel[stations[i].level];
 				stations[i].cost[0] = 10;
 				stations[i].cost[1] = 100;
 				stations[i].cost[2] = 500;
@@ -168,9 +202,17 @@ public class TechTree : MonoBehaviour {
 			if (i == 4){
 				stations[i].name = "Coiler";
 				stations[i].level = 0;
-				stations[i].maxLevel = 5;
-				stations[i].cost = new float[stations[i].maxLevel];
-				stations[i].income = new float[stations[i].maxLevel];
+				stations[i].maxLevel = 4;
+				stations[i].cost = new float[stations[i].maxLevel+1];
+				stations[i].income = new float[stations[i].maxLevel+1];
+				stations[i].spriteLevel = new Sprite[stations[i].maxLevel+1];
+				stations[i].spriteLevel[0] = Resources.Load<Sprite>("TinyRPGTown/Artwork/Sprites/rock");
+				stations[i].spriteLevel[1] = Resources.Load<Sprite>("TinyRPGTown/Artwork/Sprites/barrel");
+				stations[i].spriteLevel[2] = Resources.Load<Sprite>("TinyRPGTown/Artwork/Sprites/chest");
+				stations[i].spriteLevel[3] = Resources.Load<Sprite>("TinyRPGTown/Artwork/Sprites/building-thin");
+				stations[i].spriteLevel[4] = Resources.Load<Sprite>("TinyRPGTown/Artwork/Sprites/Building");
+				SpriteRenderer stationSprite = stations[i].target.GetComponent<SpriteRenderer>();
+				stationSprite.sprite = stations[i].spriteLevel[stations[i].level];
 				stations[i].cost[0] = 10;
 				stations[i].cost[1] = 100;
 				stations[i].cost[2] = 500;
@@ -187,9 +229,17 @@ public class TechTree : MonoBehaviour {
 			if (i == 5){
 				stations[i].name = "Cold Mill";
 				stations[i].level = 0;
-				stations[i].maxLevel = 5;
-				stations[i].cost = new float[stations[i].maxLevel];
-				stations[i].income = new float[stations[i].maxLevel];
+				stations[i].maxLevel = 4;
+				stations[i].cost = new float[stations[i].maxLevel+1];
+				stations[i].income = new float[stations[i].maxLevel+1];
+				stations[i].spriteLevel = new Sprite[stations[i].maxLevel+1];
+				stations[i].spriteLevel[0] = Resources.Load<Sprite>("TinyRPGTown/Artwork/Sprites/rock");
+				stations[i].spriteLevel[1] = Resources.Load<Sprite>("TinyRPGTown/Artwork/Sprites/barrel");
+				stations[i].spriteLevel[2] = Resources.Load<Sprite>("TinyRPGTown/Artwork/Sprites/chest");
+				stations[i].spriteLevel[3] = Resources.Load<Sprite>("TinyRPGTown/Artwork/Sprites/building-thin");
+				stations[i].spriteLevel[4] = Resources.Load<Sprite>("TinyRPGTown/Artwork/Sprites/Building");
+				SpriteRenderer stationSprite = stations[i].target.GetComponent<SpriteRenderer>();
+				stationSprite.sprite = stations[i].spriteLevel[stations[i].level];
 				stations[i].cost[0] = 10;
 				stations[i].cost[1] = 100;
 				stations[i].cost[2] = 500;
@@ -206,9 +256,17 @@ public class TechTree : MonoBehaviour {
 			if (i == 6){
 				stations[i].name = "Pickling Line";
 				stations[i].level = 0;
-				stations[i].maxLevel = 5;
-				stations[i].cost = new float[stations[i].maxLevel];
-				stations[i].income = new float[stations[i].maxLevel];
+				stations[i].maxLevel = 4;
+				stations[i].cost = new float[stations[i].maxLevel+1];
+				stations[i].income = new float[stations[i].maxLevel+1];
+				stations[i].spriteLevel = new Sprite[stations[i].maxLevel+1];
+				stations[i].spriteLevel[0] = Resources.Load<Sprite>("TinyRPGTown/Artwork/Sprites/rock");
+				stations[i].spriteLevel[1] = Resources.Load<Sprite>("TinyRPGTown/Artwork/Sprites/barrel");
+				stations[i].spriteLevel[2] = Resources.Load<Sprite>("TinyRPGTown/Artwork/Sprites/chest");
+				stations[i].spriteLevel[3] = Resources.Load<Sprite>("TinyRPGTown/Artwork/Sprites/building-thin");
+				stations[i].spriteLevel[4] = Resources.Load<Sprite>("TinyRPGTown/Artwork/Sprites/Building");
+				SpriteRenderer stationSprite = stations[i].target.GetComponent<SpriteRenderer>();
+				stationSprite.sprite = stations[i].spriteLevel[stations[i].level];
 				stations[i].cost[0] = 10;
 				stations[i].cost[1] = 100;
 				stations[i].cost[2] = 500;
@@ -231,15 +289,17 @@ public class Station {
 	public GameObject target;
 	public int level;
 	public int maxLevel;
+	public Sprite[] spriteLevel;
 	public float[] cost;
 	public float[] income;
 	public bool interactable = false;
 
-	public Station(string newName, GameObject newTarget, int newLevel, int newMaxLevel, float[] newCost, float[] newIncome, bool newInteractable) {
+	public Station(string newName, GameObject newTarget, int newLevel, int newMaxLevel, Sprite[] newSpriteLevel, float[] newCost, float[] newIncome, bool newInteractable) {
 		name = newName;
 		target = newTarget;
 		level = newLevel;
 		maxLevel = newMaxLevel;
+		spriteLevel = newSpriteLevel;
 		cost = newCost;
 		income = newIncome;
 		interactable = newInteractable;
