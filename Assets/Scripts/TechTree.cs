@@ -21,11 +21,14 @@ public class TechTree : MonoBehaviour {
 	public Color negativeProfitColor;
 	public Color positiveProfitColor;
 	private KeyCode buttonInteract;
+	private KeyCode buttonHire;
 	public Station[] stations;
+	public string workerName = "Worker_01";
 
 	void Start () {
 		profitNumber.text = profit.ToString();
 		buttonInteract = KeyCode.Space;
+		buttonHire = KeyCode.Return;
 		for(int i = 0; i < stations.Length; ++i) {
 			stations[i].interactable = stations[i].target.GetComponent<StationObject>().interactable;		
 		}
@@ -42,11 +45,18 @@ public class TechTree : MonoBehaviour {
 				}				
 			}
 		}
+		if (Input.GetKeyDown(buttonHire)){
+			for(int i = 0; i < stations.Length; ++i){
+				stations[i].interactable = stations[i].target.GetComponent<StationObject>().interactable;
+				if (stations[i].interactable){
+					SpawnWorker(i, workerName);
+				}				
+			}
+		}
 	}
 
 	void UpgradeStation (int i) {
 		if (stations[i].level < stations[i].maxLevel){
-			Debug.Log(stations[i].cost[stations[i].level]);
 			profit -= stations[i].cost[stations[i].level];
 			stations[i].level += 1;
 			SpriteRenderer stationSprite = stations[i].target.GetComponent<SpriteRenderer>();
@@ -55,15 +65,15 @@ public class TechTree : MonoBehaviour {
 		}
 	}
 
-	void SetCashTextValue(float c, Text t){
-		if (c < 0){
-			t.text = "-$" + Mathf.Abs(c).ToString("F0");
-			t.color = negativeProfitColor;
-		} else if (c == 0){
-			t.text = "$" + Mathf.Abs(c).ToString("F0");
-			t.color = positiveProfitColor;
-		} else {
-			t.text = "$" + Mathf.Abs(c).ToString("F0");
+	void SpawnWorker(int i, string worker){
+			StationObject stationObject = stations[i].target.GetComponent<StationObject>();
+		if (stations[i].target.GetComponent<StationObject>().workerSpawn != null){
+			if (!stationObject.jobFull){
+				GameObject workerObject = Instantiate(Resources.Load<GameObject>("Prefabs/" + worker));
+				workerObject.transform.position = stationObject.workerSpawn.position;
+				workerObject.transform.parent = stationObject.workerSpawn;
+				stationObject.jobFull = true;
+			}
 		}
 	}
 
@@ -85,6 +95,18 @@ public class TechTree : MonoBehaviour {
 	void ApplyProfitRate(){
 		profit += (baseIncome * incomeRate) - wages;
 		ProfitRate();
+	}
+
+	void SetCashTextValue(float c, Text t){
+		if (c < 0){
+			t.text = "-$" + Mathf.Abs(c).ToString("F0");
+			t.color = negativeProfitColor;
+		} else if (c == 0){
+			t.text = "$" + Mathf.Abs(c).ToString("F0");
+			t.color = positiveProfitColor;
+		} else {
+			t.text = "$" + Mathf.Abs(c).ToString("F0");
+		}
 	}
 
 	void SetStations(){
@@ -280,6 +302,37 @@ public class TechTree : MonoBehaviour {
 			}
 		}
 	}
+	void SetWorkers(){
+		for(int i = 0; i < stations.Length; ++i){
+
+			// Station 0
+			if (i == 0){
+				stations[i].name = "Laborer";
+				stations[i].level = 0;
+				stations[i].maxLevel = 4;
+				stations[i].cost = new float[stations[i].maxLevel+1];
+				stations[i].income = new float[stations[i].maxLevel+1];
+				stations[i].spriteLevel = new Sprite[stations[i].maxLevel+1];
+				stations[i].spriteLevel[0] = Resources.Load<Sprite>("TinyRPGTown/Artwork/Sprites/rock");
+				stations[i].spriteLevel[1] = Resources.Load<Sprite>("TinyRPGTown/Artwork/Sprites/barrel");
+				stations[i].spriteLevel[2] = Resources.Load<Sprite>("TinyRPGTown/Artwork/Sprites/chest");
+				stations[i].spriteLevel[3] = Resources.Load<Sprite>("TinyRPGTown/Artwork/Sprites/building-thin");
+				stations[i].spriteLevel[4] = Resources.Load<Sprite>("TinyRPGTown/Artwork/Sprites/Building");
+				SpriteRenderer stationSprite = stations[i].target.GetComponent<SpriteRenderer>();
+				stationSprite.sprite = stations[i].spriteLevel[stations[i].level];
+				stations[i].cost[0] = 10;
+				stations[i].cost[1] = 100;
+				stations[i].cost[2] = 500;
+				stations[i].cost[3] = 3000;
+				stations[i].cost[4] = 10000;
+				stations[i].income[0] = 0f;
+				stations[i].income[1] = 1f;
+				stations[i].income[2] = 4f;
+				stations[i].income[3] = 10f;
+				stations[i].income[4] = 40f;
+			}
+		}
+	}
 
 }
 
@@ -295,6 +348,29 @@ public class Station {
 	public bool interactable = false;
 
 	public Station(string newName, GameObject newTarget, int newLevel, int newMaxLevel, Sprite[] newSpriteLevel, float[] newCost, float[] newIncome, bool newInteractable) {
+		name = newName;
+		target = newTarget;
+		level = newLevel;
+		maxLevel = newMaxLevel;
+		spriteLevel = newSpriteLevel;
+		cost = newCost;
+		income = newIncome;
+		interactable = newInteractable;
+	}
+}
+
+[System.Serializable]
+public class Worker {
+	public string name;
+	public GameObject target;
+	public int level;
+	public int maxLevel;
+	public Sprite[] spriteLevel;
+	public float[] cost;
+	public float[] income;
+	public bool interactable = false;
+
+	public Worker(string newName, GameObject newTarget, int newLevel, int newMaxLevel, Sprite[] newSpriteLevel, float[] newCost, float[] newIncome, bool newInteractable) {
 		name = newName;
 		target = newTarget;
 		level = newLevel;

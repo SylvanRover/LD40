@@ -7,9 +7,16 @@ public class StationObject : MonoBehaviour {
 	public TechTree techTree;
 	private SpriteRenderer mySpriteRenderer;
 	public bool interactable = false;
+	public Transform workerSpawn;
+	public bool jobFull = false;
 
 	void Start(){
 		mySpriteRenderer = GetComponent<SpriteRenderer>();
+	}
+
+	void SpawnWorker(GameObject worker){
+		Instantiate(worker);
+		worker.transform.position = workerSpawn.position;
 	}
 
 	void OnTriggerEnter2D(Collider2D col){	
@@ -24,5 +31,4 @@ public class StationObject : MonoBehaviour {
 			interactable = false;
 		}
 	}
-
 }

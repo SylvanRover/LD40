@@ -702,6 +702,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   techTree: {fileID: 1134911299}
   interactable: 0
+  workerSpawn: {fileID: 0}
 --- !u!58 &239527388
 CircleCollider2D:
   m_ObjectHideFlags: 0
@@ -784,6 +785,34 @@ Transform:
   m_Children: []
   m_Father: {fileID: 1134911300}
   m_RootOrder: 4
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &453291377
+GameObject:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  serializedVersion: 5
+  m_Component:
+  - component: {fileID: 453291378}
+  m_Layer: 0
+  m_Name: Worker Spawn
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &453291378
+Transform:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 453291377}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: -1.32, y: -0.76, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 1360521940}
+  m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &654491344
 GameObject:
@@ -1266,6 +1295,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   techTree: {fileID: 1134911299}
   interactable: 0
+  workerSpawn: {fileID: 0}
 --- !u!58 &1003872854
 CircleCollider2D:
   m_ObjectHideFlags: 0
@@ -1698,6 +1728,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   techTree: {fileID: 1134911299}
   interactable: 0
+  workerSpawn: {fileID: 453291378}
 --- !u!58 &1360521937
 CircleCollider2D:
   m_ObjectHideFlags: 0
@@ -1777,7 +1808,8 @@ Transform:
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: 14.17, y: -7.83, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
-  m_Children: []
+  m_Children:
+  - {fileID: 453291378}
   m_Father: {fileID: 1134911300}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -1922,6 +1954,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   techTree: {fileID: 1134911299}
   interactable: 0
+  workerSpawn: {fileID: 0}
 --- !u!58 &1617506120
 CircleCollider2D:
   m_ObjectHideFlags: 0
@@ -2293,6 +2326,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   techTree: {fileID: 1134911299}
   interactable: 0
+  workerSpawn: {fileID: 0}
 --- !u!114 &1754057973
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -10167,6 +10201,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   techTree: {fileID: 1134911299}
   interactable: 0
+  workerSpawn: {fileID: 0}
 --- !u!58 &1865680783
 CircleCollider2D:
   m_ObjectHideFlags: 0
@@ -10303,6 +10338,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   techTree: {fileID: 1134911299}
   interactable: 0
+  workerSpawn: {fileID: 0}
 --- !u!58 &1898510234
 CircleCollider2D:
   m_ObjectHideFlags: 0
